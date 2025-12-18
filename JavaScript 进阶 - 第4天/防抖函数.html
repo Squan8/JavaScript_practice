@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html {
+      transform-style: preserve-3d;
+      overflow: visible;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      text-align: center;
+      line-height: 200px;
+      font-size: 30px;
+      color: #d30d0d;
+    }
+
+    .box svg {
+      fill: #d30d0d;
+      stroke: #62209b;
+      font-size: 50px;
+    }
+
+
+    .dad {
+      position: relative;
+      display: block;
+      /* 去除链接标签的下划线 */
+      text-decoration: none;
+      font-size: 30px;
+      color: aliceblue;
+      font-weight: 700;
+      height: 100px;
+      width: 200px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+      /* 文字水平居中 */
+      line-height: 90px;
+      /* overflow: hidden; */
+    }
+
+    .dad::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200%;
+      background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+      /* animation: move .5s infinite linear; */
+      animation-play-state: paused;
+    }
+
+    /* 实现鼠标悬浮时，展示动画 */
+    .dad:hover::before {
+      animation-play-state: running;
+    }
+
+
+
+    span {
+      display: block;
+      position: absolute;
+      height: 90px;
+      width: 190px;
+      background-color: #131212;
+      top: 5px;
+      left: 5px;
+      border-radius: 5px;
+    }
+
+    @keyframes move {
+      0% {
+        transform: rotateZ(0px);
+      }
+
+      100% {
+        transform: rotateZ(360deg);
+      }
+    }
+
+    .one {
+      height: 200px;
+      width: 200px;
+      background-color: pink;
+    }
+
+    .two {
+      height: 50px;
+      width: 50px;
+      background-color: yellow;
+      float: left;
+    }
+
+    .three {
+      height: 50px;
+      width: 100px;
+      background-color: red;
+      float: left;
+    }
+
+    .fixed {
+      position: fixed;
+      top: 200px;
+      left: 500px;
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+    }
+
+    .sticky {
+      position: sticky;
+      top: 100px;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(75, 19, 207);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      cursor: help;
+    }
+
+    .container .item {
+      cursor: not-allowed;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      margin: 10px;
+    }
+
+    #register {
+      height: 200px;
+      width: 200px;
+      background-color: #fff;
+      color: skyblue;
+    }
+
+    .pic {
+      width: 200px;
+      height: 200px;
+      color: white;
+      background-color: rgb(255, 0, 255);
+      font-size: small;
+    }
+
+    .pink {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      font-size: large;
+    }
+
+    .username {
+      font-size: 20px;
+    }
+
+    .user {
+      font-size: 50px;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <svg t="1765887218583" class="icon" viewBox="0 0 1303 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      p-id="4684">
+      <path
+        d="M1262.713949 1022.696727a40.494545 40.494545 0 0 1-35.467636-21.131636C1073.553222 726.109091 857.582313 693.527273 571.513949 691.013818v258.792727c0 16.384-9.309091 31.185455-23.924364 37.888a40.029091 40.029091 0 0 1-43.752727-6.702545L14.178676 543.278545a41.984 41.984 0 0 1-1.024-61.719272L502.719767 12.474182A40.122182 40.122182 0 0 1 546.937949 4.654545a41.890909 41.890909 0 0 1 24.576 38.353455v219.880727c128 6.516364 244.736 43.938909 347.415273 111.522909 90.298182 59.392 169.611636 141.870545 235.613091 245.201455 111.336727 174.08 146.525091 346.018909 148.014545 353.186909a41.890909 41.890909 0 0 1-25.6 47.290182 41.332364 41.332364 0 0 1-14.242909 2.606545zM101.870313 510.789818L489.873222 857.739636V649.029818c0-22.993455 18.245818-41.704727 40.866909-41.704727 174.266182 0 315.485091 9.402182 437.992727 54.923636a565.341091 565.341091 0 0 1 172.404364 100.445091c-15.918545-32.488727-34.443636-66.187636-56.040727-99.793454-135.912727-210.850909-322.280727-317.626182-554.356364-317.626182a41.239273 41.239273 0 0 1-40.866909-41.704727V139.170909L101.870313 510.789818z"
+        p-id="4685"></path>
+    </svg>
+  </div>
+
+  <a href="#" class="dad">
+    <span>start</span>
+  </a>
+
+  <img src="" alt="">
+  <input type="text">
+  <div class="one">
+    <div class="two">
+
+    </div>
+    <div class="three">
+
+    </div>
+  </div>
+
+  <div class="fixed">
+    固定定位
+  </div>
+
+  <div class="sticky">
+    吸顶
+  </div>
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <button id="register">
+    register
+  </button>
+
+  <div class="pic">
+    className
+  </div>
+
+  <input type="text" placeholder="请输入用户名" class="username">
+
+  <div class="hello"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const box = document.querySelector('.box')
+    let count = 0
+    function mouseMove() {
+      box.innerHTML = count++
+    }
+
+    // box.addEventListener('mousemove', _.debounce(mouseMove, 500))
+
+    // 核心：利用setTimeout定时器来实现
+    // 1. 声明定时器变量
+    // 2. 每次鼠标移动时（mousemove事件触发）先判断是否有定时器，如果有则清除定时器
+    // 3. 如果没有定时器则开启定时器，存入到定时器变量里面
+    // 4. 定时器里面写函数调用
+    // function debounce(fn, t) {
+    //   let timer
+    //   return function () {
+    //     if (timer) {
+    //       clearTimeout(timer)
+    //     }
+    //     timer = setTimeout(function () {
+    //       fn()
+    //     }, t)
+    //   }
+
+    // }
+    // box.addEventListener('mousemove', debounce(mouseMove, 500))
+
+    // 核心：利用setTimeout定时器来实现
+    // 1. 声明定时器变量
+    // 2. 每次鼠标移动时（mousemove事件触发）先判断是否有定时器，如果有定时器则不开启新定时器
+    // 3. 如果没有定时器则开启定时器，存入到定时器变量里面
+    //    --定时器里面调用执行的函数
+    //    --定时器里面要把定时器清空
+    function throttle(fn, t) {
+      let timer = null
+      return function () {
+        if (!timer) {
+          timer = setTimeout(function () {
+            fn()
+            timer = null
+          }, t)
+        }
+      }
+    }
+    box.addEventListener('mousemove', throttle(mouseMove, 5000))
+
+    const button = document.querySelector('#register')
+    button.addEventListener('click', function () {
+      axios({
+        url: "http://hmajax.itheima.net/api/register",
+        method: "POST",
+        data: {
+          username: 'itheima007',
+          password: '7654321'
+        }
+      }).then(res => {
+        console.log(res)
+      })
+    })
+
+    const pic = document.querySelector('.pic')
+    pic.className = 'pink'
+
+    const input = document.querySelector('.username')
+    input.addEventListener('input', function (e) {
+      input.classList.add('user')
+      console.log(e.offsetX, e.target.offsetY)
+    })
+
+    let apple = 0
+  </script>
+</body>
+
+</html>
